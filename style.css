@@ -1,0 +1,59 @@
+:root {
+  --primary-color: #7588f2;
+  --bg-color: #dff2f8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+.button {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 3rem 6rem;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: unset;
+}
